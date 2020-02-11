@@ -1,0 +1,2 @@
+- Đầu tiên bạn nên tải laravel về ( ở đây mình dùng bản 5.8)
+    - mở terminal chạy: composer create-project --prefer-dist laravel/laravel project02 "5.8.*"
