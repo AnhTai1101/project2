@@ -5,3 +5,17 @@
         - đổi đường dẫn 
             require __DIR__.'/../vendor/autoload.php'; -> require __DIR__.'/vendor/autoload.php';
             $app = require_once __DIR__.'/../bootstrap/app.php'; -> $app = require_once __DIR__.'/bootstrap/app.php';
+    - tạo database
+        - vào myphp tạp database
+        - vào .env chỉnh sửa liên kết database
+- Tìm template để làm dự án
+    - chuyển template và trong public
+    - tạo view để làm giao diện (lấy từ template đã tải về) -> tạo view trong resources->views
+        - tạo mục frontend để chứa view frontend
+    - thêm thẻ <base href="{{ asset('') }}"> trong view
+    - cắt giao diện gồm
+        - cắt header để include vào layout
+        - cắt footer để include vào layout
+        - cắt layout
+        - tạo trang home
+    - chỉnh sửa lại đường dẫn tới css và js và image
