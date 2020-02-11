@@ -1,2 +1,7 @@
 - Đầu tiên bạn nên tải laravel về ( ở đây mình dùng bản 5.8)
     - mở terminal chạy: composer create-project --prefer-dist laravel/laravel project02 "5.8.*"
+    - chuyển toàn bộ file trong folder public ra ngoài
+    - vào index.php
+        - đổi đường dẫn 
+            require __DIR__.'/../vendor/autoload.php'; -> require __DIR__.'/vendor/autoload.php';
+            $app = require_once __DIR__.'/../bootstrap/app.php'; -> $app = require_once __DIR__.'/bootstrap/app.php';
