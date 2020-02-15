@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<title>Home</title>
+	<title> @yield('title')</title>
 	<meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <base href="{{ asset('') }}">
@@ -34,6 +34,7 @@
 <!--===============================================================================================-->
 	<link rel="stylesheet" type="text/css" href="public/cozastore/css/util.css">
 	<link rel="stylesheet" type="text/css" href="public/cozastore/css/main.css">
+	<link rel="stylesheet" type="text/css" href="public/cozastore/css/style.css">
 <!--===============================================================================================-->
 </head>
 <body class="animsition">

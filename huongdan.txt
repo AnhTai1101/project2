@@ -1,5 +1,5 @@
-- Đầu tiên bạn nên tải laravel về ( ở đây mình dùng bản 5.8)
-    - mở terminal chạy: composer create-project --prefer-dist laravel/laravel project02 "5.8.*"
+- Đầu tiên tải laravel về ( ở đây mình dùng bản 5.8)
+    - mở terminal chạy: composer create-project --prefer-dist laravel/laravel NameProject "5.8.*"
     - chuyển toàn bộ file trong folder public ra ngoài
     - vào index.php
         - đổi đường dẫn 
@@ -19,3 +19,11 @@
         - cắt layout
         - tạo trang home
     - chỉnh sửa lại đường dẫn tới css và js và image
+- Tạo route để test 
+- Trong một trang có thể chứa nhiều section nếu chỉ truyền ít dữ liệu ta nên dùng $section('name','content')
+- Thiết kế xong database ngoài web ta dùng migration để tạo database
+    - cú pháp tạo migration: php artisan make:migration TênMigration ( nên đặt tên dễ gợi ý tới chức năng)
+        - ví dụ: php artisan make:migration create_User_table ( laravel sẽ tạo cho mình một table với tên là User)
+        - ví dụ 2: php artisan make:migration create_TypeProduct_table ( laravel sẽ tạo cho mình một table với tên là Type_Product)
+        - Nếu có chữ viết hoa thì laravel sẽ thêm _ trước ký tự đó và chuyển viết hoa thành viết thường
+    - 
