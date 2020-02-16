@@ -26,4 +26,11 @@
         - ví dụ: php artisan make:migration create_User_table ( laravel sẽ tạo cho mình một table với tên là User)
         - ví dụ 2: php artisan make:migration create_TypeProduct_table ( laravel sẽ tạo cho mình một table với tên là Type_Product)
         - Nếu có chữ viết hoa thì laravel sẽ thêm _ trước ký tự đó và chuyển viết hoa thành viết thường
-    - 
+    - Nên vào https://dbdiagram.io/ để thiết kế database
+    - Có thể dùng lệnh 'php artisan migrate:rollback' để quay rollback database
+    - Lưu ý có thể table bị lỗi sẽ k xóa được khi dùng lệnh trên. Nếu thế ta phải vào database để xóa
+- Seender dữ liệu mẫu cho database
+    - Cách tạo Seender php artisan make:seed seedName
+    - Cách chạy 1 Seender: php artisan db:seed --class=NameClass
+        vd: php artisan db:seed --class=users
+        định dạng datetime khi truyền vào phải dưới dạng '2019-10-02' phải có chứa dấu nháy bao quanh ('yyyy-mm-dd')
