@@ -37,3 +37,5 @@
     - Để chạy seed mặc định php artisan db:seed 
         nghĩa là laravel sẽ chạy seeder databaseSeeder.php và mình muốn chạy seeder thì có thể tùy biến trong đó
         - Lưu ý khi tạo cấu trúc trong seed thì nên để dạng số cuối array để tránh bị lỗi và nên đưa vào trong dấu nháy
+- Model: 
+    - Để lấy một cột nào đó trong bảng ta gọi đến phương thức pluck('cột 1','cột 2')

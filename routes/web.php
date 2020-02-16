@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('frontend.home');
 });
+Route::get('users/{id}', function ($id) {
+    Route::get('users/'.$id, [
+        'as'=>$id,
+        'uses'=>'homeController@'.$id
+    ]);
+    
+});
+Route::get('color', [
+    'as'=>'color',
+    'uses'=>'homeController@color'
+]);
