@@ -21,7 +21,23 @@ Route::get('users/{id}', function ($id) {
     ]);
     
 });
+// Lấy thử thông tin
 Route::get('color', [
     'as'=>'color',
     'uses'=>'homeController@color'
+]);
+// thử liên kết chính-ngoại
+Route::get('view', [
+    'as'=>'view',
+    'uses'=>'homeController@view'
+]);
+// Liên kết ngoại-chính
+Route::get('bills', [
+    'as'=>'bills',
+    'uses'=>'homeController@bills'
+]);
+// Liên kết một nhiều
+Route::get('bill_detail', [
+    'as'=>'bill_detail',
+    'uses'=>'homeController@bill_detail'
 ]);

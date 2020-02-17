@@ -2,7 +2,7 @@
     - mở terminal chạy: composer create-project --prefer-dist laravel/laravel NameProject "5.8.*"
     - chuyển toàn bộ file trong folder public ra ngoài
     - vào index.php
-        - đổi đường dẫn 
+        - đổi đường dẫn (trong file index.php)
             require __DIR__.'/../vendor/autoload.php'; -> require __DIR__.'/vendor/autoload.php';
             $app = require_once __DIR__.'/../bootstrap/app.php'; -> $app = require_once __DIR__.'/bootstrap/app.php';
     - tạo database
@@ -19,9 +19,9 @@
         - cắt layout
         - tạo trang home
     - chỉnh sửa lại đường dẫn tới css và js và image
-- Tạo route để test 
-- Trong một trang có thể chứa nhiều section nếu chỉ truyền ít dữ liệu ta nên dùng $section('name','content')
-- Thiết kế xong database ngoài web ta dùng migration để tạo database
+- Tạo route để test (trong route/web.php)
+- Trong một trang có thể chứa nhiều section nếu chỉ truyền ít dữ liệu ta nên dùng $section('name','content') (trong resources/views)
+- Thiết kế xong database ngoài web ta dùng migration để tạo database (migration được tạo nằm trong database/migrations)
     - cú pháp tạo migration: php artisan make:migration TênMigration ( nên đặt tên dễ gợi ý tới chức năng)
         - ví dụ: php artisan make:migration create_User_table ( laravel sẽ tạo cho mình một table với tên là User)
         - ví dụ 2: php artisan make:migration create_TypeProduct_table ( laravel sẽ tạo cho mình một table với tên là Type_Product)
@@ -30,7 +30,7 @@
     - Có thể dùng lệnh 'php artisan migrate:rollback' để quay rollback database
     - Lưu ý có thể table bị lỗi sẽ k xóa được khi dùng lệnh trên. Nếu thế ta phải vào database để xóa
 - Seender dữ liệu mẫu cho database
-    - Cách tạo Seender php artisan make:seed seedName
+    - Cách tạo Seender php artisan make:seed seedName (seeder nằm trong database/seeds)
     - Cách chạy 1 Seender: php artisan db:seed --class=NameClass
         vd: php artisan db:seed --class=users
         định dạng datetime khi truyền vào phải dưới dạng '2019-10-02' phải có chứa dấu nháy bao quanh ('yyyy-mm-dd')
@@ -39,3 +39,14 @@
         - Lưu ý khi tạo cấu trúc trong seed thì nên để dạng số cuối array để tránh bị lỗi và nên đưa vào trong dấu nháy
 - Model: 
     - Để lấy một cột nào đó trong bảng ta gọi đến phương thức pluck('cột 1','cột 2')
+- Liên kết giữa các bảng: 
+    - Liên kết 1-1 từ bảng chính (chứa khóa chính) tới bảng phụ ( chứa khóa ngoại)
+        - cú pháp: HasOne
+            public function bills()
+            {
+                return $this->hasOne('App\bills', 'khóa ngoại', 'khóa chính');
+            }
+    - Liên kết 1-1 từ bảng phụ tới bảng chính
+        - cú pháp: BeLongsTo
+    - Liên kết 1 - nhiều
+        - cú pháp: hasMany

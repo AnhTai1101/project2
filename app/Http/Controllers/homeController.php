@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 use App\color;
+use App\customer;
+use App\bills;
+use App\bill_detail;
 
 use Illuminate\Http\Request;
 
@@ -11,4 +14,41 @@ class homeController extends Controller
         $color = color::all()->pluck('name','id');
         dd($color);
     }
+    // Liên kết 1-1 chiều thuận
+    public function view(){
+        $view = customer::all();
+        // dd($view);
+        foreach($view as $view){
+            echo $view->name;
+            echo '<br>';
+            echo $view->bills->id;
+        }
+        
+    }
+    // Liên kết 1-1 nghịch đảo
+    public function bills(){
+        $bills = bills::all();
+        // dd($view);
+        foreach($bills as $bills){
+            echo $bills->date_order;
+            echo '<br>';
+            echo $bills->customer->name;
+        }
+        
+    }
+
+    // liên kết 1 nhiều
+    public function bill_detail(){
+        $bills = bills::all();
+        // dd($view);
+        foreach($bills as $bill){
+            echo $bill->note;
+            echo '<br>';
+            foreach($bill->bill_detail as $bill_detail){
+                echo $bill_detail->price_unit;
+            }
+        }
+        
+    }
+
 }
