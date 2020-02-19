@@ -50,3 +50,4 @@
         - cú pháp: BeLongsTo
     - Liên kết 1 - nhiều
         - cú pháp: hasMany
+- Chọn cột mình cần trong truy vẫn. Ta dùng select('cot1','cot2')

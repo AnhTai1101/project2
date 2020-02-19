@@ -5,6 +5,7 @@ use App\color;
 use App\customer;
 use App\bills;
 use App\bill_detail;
+use App\product;
 
 use Illuminate\Http\Request;
 
@@ -49,6 +50,28 @@ class homeController extends Controller
             }
         }
         
+    }
+    // test product
+    public function product(){
+        $product = product::all();
+        foreach($product as $product){
+            echo $product->name;
+            echo '<br>';
+            echo 'Mau: ';
+            echo $product->color_id;
+            echo '<br>';
+            echo $product->color->name;
+            // foreach($product->color as $color){
+            //     echo $color->name;
+            // }
+            // foreach($product->size as $size){
+            //     echo $size;
+            // }
+        }
+    }
+    public function hot(){
+        $hot = product::where('price_unit','>','price_promotion')->select('name','id')->get()->toArray();
+        dd($hot);
     }
 
 }

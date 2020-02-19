@@ -10,13 +10,13 @@ class color extends Model
     // Liên kết tới product
     public function product()
     {
-        return $this->hasOne('App\color', 'color_id', 'id');
+        return $this->hasOne('App\product', 'color_id', 'id');
     }
     
     // Liên kết tới product_quantity
     public function product_quantity()
     {
-        return $this->hasOne('App\color', 'color_id', 'id');
+        return $this->hasOne('App\product', 'color_id', 'id');
     }
 
 }

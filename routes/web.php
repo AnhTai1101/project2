@@ -41,3 +41,13 @@ Route::get('bill_detail', [
     'as'=>'bill_detail',
     'uses'=>'homeController@bill_detail'
 ]);
+// Liên kết một nhiều
+Route::get('product', [
+    'as'=>'product',
+    'uses'=>'homeController@product'
+]);
+// lựa chọn ra sản phầm hot
+Route::get('hot', [
+    'as'=>'hot',
+    'uses'=>'homeController@hot'
+]);
