@@ -16,6 +16,15 @@ class homeController extends Controller
         $slide = slide::all();
         return view('frontend.home',compact('slide'));
     }
+    // show form
+    public function form(){
+        return view('frontend.form');
+    }
+    // show form
+    public function cart(){
+        return view('frontend.tableShoppingCart');
+    }
+    // show color
     public function color(){
         $color = color::all()->pluck('name','id');
         dd($color);

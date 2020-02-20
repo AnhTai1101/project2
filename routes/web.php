@@ -52,3 +52,13 @@ Route::get('hot', [
     'as'=>'hot',
     'uses'=>'homeController@hot'
 ]);
+// show form
+Route::get('form', [
+    'as'=>'form',
+    'uses'=>'homeController@form'
+]);
+// show cart
+Route::get('cart', [
+    'as'=>'cart',
+    'uses'=>'homeController@cart'
+]);
