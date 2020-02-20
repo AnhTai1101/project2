@@ -6,25 +6,25 @@
         <div class="top-bar">
             <div class="content-topbar flex-sb-m h-full container">
                 <div class="left-top-bar">
-                    Free shipping for standard order over $100
+                    Miễn phí ship cho những đơn hàng có giá trị lớn hơn 1 triệu.
                 </div>
 
                 <div class="right-top-bar flex-w h-full">
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        Help & FAQs
+                        Trợ giúp và liên hệ.
                     </a>
 
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
-                        My Account
+                        Tài khoản của tôi
                     </a>
 
-                    <a href="#" class="flex-c-m trans-04 p-lr-25">
+                    {{-- <a href="#" class="flex-c-m trans-04 p-lr-25">
                         EN
                     </a>
 
                     <a href="#" class="flex-c-m trans-04 p-lr-25">
                         USD
-                    </a>
+                    </a> --}}
                 </div>
             </div>
         </div>
@@ -41,7 +41,7 @@
                 <div class="menu-desktop">
                     <ul class="main-menu">
                         <li class="active-menu">
-                            <a href="index.html">Home</a>
+                            <a href="index.html">Trang chủ</a>
                             <ul class="sub-menu">
                                 <li><a href="index.html">Homepage 1</a></li>
                                 <li><a href="home-02.html">Homepage 2</a></li>
@@ -54,19 +54,19 @@
                         </li>
 
                         <li class="label1" data-label1="hot">
-                            <a href="shoping-cart.html">Features</a>
+                            <a href="shoping-cart.html">Sản phẩm hot</a>
                         </li>
 
                         <li>
-                            <a href="blog.html">Blog</a>
+                            <a href="blog.html">Bài viết</a>
                         </li>
 
                         <li>
-                            <a href="about.html">About</a>
+                            <a href="about.html">Thông tin</a>
                         </li>
 
                         <li>
-                            <a href="contact.html">Contact</a>
+                            <a href="contact.html">Liên lạc</a>
                         </li>
                     </ul>
                 </div>	

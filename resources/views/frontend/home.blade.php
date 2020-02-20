@@ -92,77 +92,32 @@
 	<section class="section-slide">
 		<div class="wrap-slick1">
 			<div class="slick1">
-				<div class="item-slick1" style="background-image: url(public/cozastore/images/slide-01.jpg);">
-					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
-								<span class="ltext-101 cl2 respon2">
-									Women Collection 2018
-								</span>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
-								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-									NEW SEASON
-								</h2>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
-
-				<div class="item-slick1" style="background-image: url(public/cozastore/images/slide-02.jpg);">
-					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="rollIn" data-delay="0">
-								<span class="ltext-101 cl2 respon2">
-									Men New-Season
-								</span>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="lightSpeedIn" data-delay="800">
-								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-									Jackets & Coats
-								</h2>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="slideInUp" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
-								</a>
+				@foreach ($slide as $slide)
+					<div class="item-slick1" style="background-image: url(public/cozastore/images/{{ $slide->image }});">
+						<div class="container h-full">
+							<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
+								<div class="layer-slick1 animated visible-false" data-appear="fadeInDown" data-delay="0">
+									<span class="ltext-101 cl2 respon2">
+										{{ $slide->name }}
+									</span>
+								</div>
+									
+								<div class="layer-slick1 animated visible-false" data-appear="fadeInUp" data-delay="800">
+									<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
+										NEW SEASON
+									</h2>
+								</div>
+									
+								<div class="layer-slick1 animated visible-false" data-appear="zoomIn" data-delay="1600">
+									<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
+										Shop Now
+									</a>
+								</div>
 							</div>
 						</div>
 					</div>
-				</div>
-
-				<div class="item-slick1" style="background-image: url(public/cozastore/images/slide-03.jpg);">
-					<div class="container h-full">
-						<div class="flex-col-l-m h-full p-t-100 p-b-30 respon5">
-							<div class="layer-slick1 animated visible-false" data-appear="rotateInDownLeft" data-delay="0">
-								<span class="ltext-101 cl2 respon2">
-									Men Collection 2018
-								</span>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="rotateInUpRight" data-delay="800">
-								<h2 class="ltext-201 cl2 p-t-19 p-b-43 respon1">
-									New arrivals
-								</h2>
-							</div>
-								
-							<div class="layer-slick1 animated visible-false" data-appear="rotateIn" data-delay="1600">
-								<a href="product.html" class="flex-c-m stext-101 cl0 size-101 bg1 bor1 hov-btn1 p-lr-15 trans-04">
-									Shop Now
-								</a>
-							</div>
-						</div>
-					</div>
-				</div>
+				@endforeach
+				
 			</div>
 		</div>
 	</section>
@@ -180,17 +135,17 @@
 						<a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Women
+									Nữ
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									Spring 2018
+									Mùa hè 2020
 								</span>
 							</div>
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Shop
 								</div>
 							</div>
 						</a>
@@ -205,17 +160,17 @@
 						<a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Men
+									Nam
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									Spring 2018
+									Mùa hè 2020
 								</span>
 							</div>
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Shop
 								</div>
 							</div>
 						</a>
@@ -230,17 +185,17 @@
 						<a href="product.html" class="block1-txt ab-t-l s-full flex-col-l-sb p-lr-38 p-tb-34 trans-03 respon3">
 							<div class="block1-txt-child1 flex-col-l">
 								<span class="block1-name ltext-102 trans-04 p-b-8">
-									Accessories
+									Phụ kiện
 								</span>
 
 								<span class="block1-info stext-102 trans-04">
-									New Trend
+									Khuynh hướng thời trang 2020
 								</span>
 							</div>
 
 							<div class="block1-txt-child2 p-b-4 trans-05">
 								<div class="block1-link stext-101 cl0 trans-09">
-									Shop Now
+									Shop
 								</div>
 							</div>
 						</a>
@@ -256,34 +211,34 @@
 		<div class="container">
 			<div class="p-b-10">
 				<h3 class="ltext-103 cl5">
-					Product Overview
+					Sản phẩm tiêu biểu
 				</h3>
 			</div>
 
 			<div class="flex-w flex-sb-m p-b-52">
 				<div class="flex-w flex-l-m filter-tope-group m-tb-10">
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5 how-active1" data-filter="*">
-						All Products
+						Tất cả sản phẩm
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".women">
-						Women
+						Nữ
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".men">
-						Men
+						Nam
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".bag">
-						Bag
+						Túi
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".shoes">
-						Shoes
+						Giày
 					</button>
 
 					<button class="stext-106 cl6 hov1 bor3 trans-04 m-r-32 m-tb-5" data-filter=".watches">
-						Watches
+						Đồng hồ
 					</button>
 				</div>
 
@@ -291,13 +246,13 @@
 					<div class="flex-c-m stext-106 cl6 size-104 bor4 pointer hov-btn3 trans-04 m-r-8 m-tb-4 js-show-filter">
 						<i class="icon-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-filter-list"></i>
 						<i class="icon-close-filter cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						 Filter
+						 Sắp xếp
 					</div>
 
 					<div class="flex-c-m stext-106 cl6 size-105 bor4 pointer hov-btn3 trans-04 m-tb-4 js-show-search">
 						<i class="icon-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-search"></i>
 						<i class="icon-close-search cl2 m-r-6 fs-15 trans-04 zmdi zmdi-close dis-none"></i>
-						Search
+						Tìm kiếm
 					</div>
 				</div>
 				
@@ -317,43 +272,43 @@
 					<div class="wrap-filter flex-w bg6 w-full p-lr-40 p-t-27 p-lr-15-sm">
 						<div class="filter-col1 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Sort By
+								Sắp xếp
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Default
+										Mặc định
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Popularity
+										Thông dụng
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Average rating
+										Đánh giá
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										Newness
+										Mới mẻ
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: Low to High
+										Giá: từ thấp
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										Price: High to Low
+										Giá: từ cao
 									</a>
 								</li>
 							</ul>
@@ -361,19 +316,19 @@
 
 						<div class="filter-col2 p-r-15 p-b-27">
 							<div class="mtext-102 cl2 p-b-15">
-								Price
+								Giá
 							</div>
 
 							<ul>
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04 filter-link-active">
-										All
+										Tất cả
 									</a>
 								</li>
 
 								<li class="p-b-6">
 									<a href="#" class="filter-link stext-106 trans-04">
-										$0.00 - $50.00
+										50k - 250k
 									</a>
 								</li>
 
@@ -1020,7 +975,7 @@
 			<!-- Load more -->
 			<div class="flex-c-m flex-w w-full p-t-45">
 				<a href="#" class="flex-c-m stext-101 cl5 size-103 bg2 bor1 hov-btn1 p-lr-15 trans-04">
-					Load More
+					Xem thêm . . . 
 				</a>
 			</div>
 		</div>

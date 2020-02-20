@@ -12,8 +12,9 @@ class slide extends Seeder
     public function run()
     {
         DB::table('slide')->insert([
-            ['name'=>'Sản phẩm hot năm 2019','image'=>'tai.jpg'],
-            ['name'=>'Sản phẩm đang sale','image'=>'tai.jpg']
+            ['id'=>1,'name'=>'Đang sale khủng','image'=>'slide-01.jpg'],
+            ['id'=>2,'name'=>'Sản phẩm hot','image'=>'slide-02.jpg'],
+            ['id'=>3,'name'=>'Sản phẩm sắp về','image'=>'slide-03.jpg']
         ]);
     }
 }

@@ -51,3 +51,4 @@
     - Liên kết 1 - nhiều
         - cú pháp: hasMany
 - Chọn cột mình cần trong truy vẫn. Ta dùng select('cot1','cot2')
+- tất cả được up lên github của lecongtai1123 có thể vào đó để kiểm tra nhiều thứ rất hay ho ở đó nhé các bạn.

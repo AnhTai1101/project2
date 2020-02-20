@@ -11,9 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.home');
-});
+Route::get('/', [
+    'as'=>'Trang-chu',
+    'uses'=>'homeController@index'
+]);
 Route::get('users/{id}', function ($id) {
     Route::get('users/'.$id, [
         'as'=>$id,

@@ -6,11 +6,16 @@ use App\customer;
 use App\bills;
 use App\bill_detail;
 use App\product;
+use App\slide;
 
 use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
+    public function index(){
+        $slide = slide::all();
+        return view('frontend.home',compact('slide'));
+    }
     public function color(){
         $color = color::all()->pluck('name','id');
         dd($color);
