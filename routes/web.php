@@ -62,3 +62,38 @@ Route::get('cart', [
     'as'=>'cart',
     'uses'=>'homeController@cart'
 ]);
+// tất cả các route admin ta sử dụng trong thư mục controller/admin
+Route::group(['namespace' => 'Admin'], function () {
+    // group admin 
+    Route::group(['prefix' => 'admin','middleware'=>'CheckLogedOut'], function () {
+        // trang index
+        Route::get('/', [
+            'as'=>'admin/home',
+            'uses'=>'homeController@home'
+        ]);
+        // trang product
+        Route::group(['prefix' => 'product'], function () {
+            Route::get('/', [
+                'as'=>'san-pham',
+                'uses'=>'productController@index'
+            ]);
+            Route::get('detail/{id}', [
+                'as'=>'product-detail',
+                'uses'=>'productController@detail'
+            ]);
+        });
+    });
+    // controller xử lý đăng nhập
+    Route::group(['prefix' => 'login','middleware'=>'CheckLogedIn'], function () {
+        Route::get('/', [
+            'as'=>'login',
+            'uses'=>'loginController@getLogin'
+        ]);
+        Route::post('/', 'loginController@postLogin');
+    });
+    // controller xử lý đăng xuất
+    Route::get('logout', [
+        'as'=>'logout',
+        'uses'=>'homeController@getLogout'
+    ]);
+});

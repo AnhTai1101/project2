@@ -15,17 +15,17 @@ class product extends Model
     // Liên kết đến product_quantity
     public function product_quantity()
     {
-        return $this->hasOne('App\product_quantity', 'product_id', 'id');
+        return $this->hasMany('App\product_quantity', 'product_id', 'id');
     }
     // Liên kết tới type_info
     public function type_info()
     {
-        return $this->belongsTo('App\info', 'info_id', 'id');
+        return $this->belongsTo('App\type_info', 'info_id', 'id');
     }
     // liên kết tới type_product
     public function type_product()
     {
-        return $this->belongsTo('App\type_product', 'product_id', 'id');
+        return $this->belongsTo('App\type_product', 'type_id', 'id');
     }
     // Liên kết tới size
     public function size()

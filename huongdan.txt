@@ -52,3 +52,24 @@
         - cú pháp: hasMany
 - Chọn cột mình cần trong truy vẫn. Ta dùng select('cot1','cot2')
 - tất cả được up lên github của lecongtai1123 có thể vào đó để kiểm tra nhiều thứ rất hay ho ở đó nhé các bạn.
+- Controller
+    - Để tạo một file trong 1 thư mục con của thư mục controller ta chạy lệnh: php artisan make:controller Admin\loginController
+    - Khi gọi tới thì ta nên dùng 
+        Route::group(['namespace'=>'Admin'], function(){
+            Route::group(['prefix'=>'login'], function(){
+                Route::get('/', 'loginController@getLogin');
+            });
+        });
+- View: trong view ta có thể quy định lại {{ asset('public/backend')/ }} (quy định lại đường dẫn mặc định)
+    - Ta có thể tạo 1 thư mục dành riêng để thông báo lỗi cho các form sau đó include vào
+        - tạo view/error
+        - tạo file để include vào login cho Admin
+- Route
+    - Bạn có thể định danh cho route qua phương thức
+        route::get('home',[
+            'as'=>'tên định danh'
+            'uses'=>'homeController'
+        ])
+- Middleware
+    - Tạo Middleware
+        php artisan make:Middleware TenMiddleware
