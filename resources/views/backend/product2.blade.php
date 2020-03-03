@@ -1,5 +1,5 @@
 @extends('backend.master')
-@section('title','Chi tiet')
+@section('title','Danh sách sản phẩm')
 @section('main')
 <style>
     h3.h3{text-align:center;margin:1em;text-transform:capitalize;font-size:1.7em;}

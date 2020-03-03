@@ -37,4 +37,8 @@ class productController extends Controller
         $type_info = type_info::all();
         return view('backend.product_detail2',compact('detail','type_product','total','type_info'));
     }
+    public function home(){
+        $category = type_product::all();
+        return view('backend.listCategory',compact('category'));
+    }
 }

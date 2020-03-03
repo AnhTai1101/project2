@@ -47,6 +47,10 @@
                             <i class="fas fa-table"></i>Danh sách sản phẩm</a>
                     </li>
                     <li>
+                        <a href="table.html">
+                            <i class="fas fa-table"></i>Danh mục sản phẩm</a>
+                    </li>
+                    <li>
                         <a href="form.html">
                             <i class="far fa-check-square"></i>Thông tin người dùng</a>
                     </li>
@@ -145,6 +149,14 @@
                     <li>
                         <a href="{{ route('san-pham') }}">
                             <i class="fas fa-table"></i>Danh sách sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="table.html">
+                            <i class="fas fa-table"></i>Danh mục sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="{{ route('category') }}">
+                            <i class="fas fa-table"></i>Thể loại</a>
                     </li>
                     <li>
                         <a href="form.html">

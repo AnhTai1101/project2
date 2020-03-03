@@ -15,6 +15,10 @@ Route::get('/', [
     'as'=>'Trang-chu',
     'uses'=>'homeController@index'
 ]);
+Route::get('Trangchu.html', [
+    'as'=>'Trang-chu',
+    'uses'=>'homeController@index'
+]);
 Route::get('users/{id}', function ($id) {
     Route::get('users/'.$id, [
         'as'=>$id,
@@ -80,6 +84,13 @@ Route::group(['namespace' => 'Admin'], function () {
             Route::get('detail/{id}', [
                 'as'=>'product-detail',
                 'uses'=>'productController@detail'
+            ]);
+        });
+        // trang category
+        Route::group(['prefix' => 'category'], function () {
+            Route::get('/', [
+                'as'=>'category',
+                'uses'=>'productController@home'
             ]);
         });
     });
